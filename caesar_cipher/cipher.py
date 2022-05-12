@@ -7,8 +7,12 @@ def encrypt(string, shift):
     encrypted_text = ""
 
     for char in string:
-        print(char)
-        
+        text = (ord(char))
+        shifted_text = (text + shift)
+        shifted_char = chr(shifted_text)
+        encrypted_text += shifted_char
+    return encrypted_text
+
 def decrypt():
     pass
 
@@ -30,3 +34,6 @@ def count_words(text):
             pass
             
     return word_count
+
+
+
