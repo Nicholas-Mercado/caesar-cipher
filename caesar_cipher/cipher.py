@@ -1,10 +1,14 @@
 import re
-from corpus_loader import word_list, name_list
+from caesar_cipher.corpus_loader import word_list, name_list
 
 
-def encrypt():
-    pass
+def encrypt(string, shift):
+    
+    encrypted_text = ""
 
+    for char in string:
+        print(char)
+        
 def decrypt():
     pass
 
