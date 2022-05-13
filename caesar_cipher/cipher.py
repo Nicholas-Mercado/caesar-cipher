@@ -5,12 +5,21 @@ from caesar_cipher.corpus_loader import word_list, name_list
 def encrypt(string, shift):
     
     encrypted_text = ""
-
+    
+    lower_offset = 97
+    upper_offset = 65
+    
     for char in string:
-        text = (ord(char))
-        shifted_text = (text + shift)
-        shifted_char = chr(shifted_text)
-        encrypted_text += shifted_char
+        
+        
+        if char.isalpha():
+            if char.islower():
+                char = chr((ord(char) + shift - lower_offset ) % 26 + lower_offset)
+                encrypted_text += char
+            if char.isupper():
+                char = chr((ord(char) + shift - upper_offset ) % 26 + upper_offset)
+                encrypted_text += char
+                
     return encrypted_text
 
 def decrypt():
