@@ -24,8 +24,8 @@ def encrypt(string, shift):
                 
     return encrypted_text
 
-def decrypt():
-    pass
+def decrypt(text, shift):
+    return encrypt(text, -shift)
 
 def crack():
     pass
