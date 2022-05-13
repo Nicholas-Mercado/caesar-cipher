@@ -19,6 +19,8 @@ def encrypt(string, shift):
             if char.isupper():
                 char = chr((ord(char) + shift - upper_offset ) % 26 + upper_offset)
                 encrypted_text += char
+        else:
+            encrypted_text += char
                 
     return encrypted_text
 
