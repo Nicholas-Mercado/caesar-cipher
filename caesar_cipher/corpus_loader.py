@@ -6,7 +6,9 @@ except AttributeError:
     pass
 else:
     ssl._create_default_https_context = _create_unverified_https_context
+    
 from nltk.corpus import words, names
+
 nltk.download('words', quiet=True)
 nltk.download('names', quiet=True)
 word_list = words.words()
