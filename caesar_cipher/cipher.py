@@ -38,7 +38,7 @@ def crack(string):
         if decimal > .5:
             return cracked_string
 
-    return
+    return ''
 
 
 def count_words(text):
